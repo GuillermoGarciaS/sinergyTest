@@ -31,5 +31,7 @@ productos['price'] = (
 
 # ----------------------- Load ------------------------ #
 
-clientes.to_csv("data/clientes_clean.csv", index=False)
-productos.to_csv("data/productos_clean.csv", index=False)
+clientes.to_csv(os.path.join(BASE_DIR, "data/clientes_clean.csv"), index=False)
+productos.to_csv(os.path.join(BASE_DIR, "data/productos_clean.csv"), index=False)
+orders.to_csv(os.path.join(BASE_DIR, "data/orders_clean.csv"), index=False)
+order_items.to_csv(os.path.join(BASE_DIR, "data/order_items_clean.csv"), index=False)
