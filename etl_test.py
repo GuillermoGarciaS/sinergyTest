@@ -1,11 +1,14 @@
 import pandas as pd
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # ---------------------- Extract ---------------------- #
 
-clientes = pd.read_csv("clientes.csv")
-orders = pd.read_csv("orders.csv")
-productos = pd.read_csv("productos.csv")
-order_items = pd.read_csv("order_items.csv")
+clientes = pd.read_csv("data/raw/clientes.csv")
+orders = pd.read_csv("data/raw/orders.csv")
+productos = pd.read_csv("data/raw/productos.csv")
+order_items = pd.read_csv("data/raw/order_items.csv")
 
 # --------------------- Transform --------------------- #
 
@@ -28,5 +31,5 @@ productos['price'] = (
 
 # ----------------------- Load ------------------------ #
 
-clientes.to_csv("clientes_clean.csv", index=False)
-productos.to_csv("productos_clean.csv", index=False)
+clientes.to_csv("data/clientes_clean.csv", index=False)
+productos.to_csv("data/productos_clean.csv", index=False)
