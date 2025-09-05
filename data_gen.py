@@ -7,7 +7,7 @@ fake = Faker("es_MX")
 
 clientes = []
 for i in range(1, 101):
-    clientes.append = ({
+    clientes.append({
         "id_cliente": i,
         "nombre": fake.name(),
         "email": fake.email(),
