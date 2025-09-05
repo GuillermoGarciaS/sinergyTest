@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import random 
 from faker import Faker
+import os
 
 fake = Faker("es_MX")
 
@@ -86,6 +87,8 @@ df_order_items = pd.DataFrame(order_items)
 
 print(df_orders.head())
 print(df_order_items.head())
+
+os.makedirs("../data/raw", exist_ok=True)
 
 df_clientes = pd.DataFrame(clientes)
 df_clientes.to_csv("data/raw/clientes.csv", index=False)
