@@ -4,6 +4,8 @@ import random
 from faker import Faker
 import os
 
+os.makedirs("data/raw", exist_ok=True)
+
 fake = Faker("es_MX")
 
 clientes = []
